@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bonane Mugwarhiriza Antoine | Data Science Portfolio</title>
+
+    <meta name="description" content="Portfolio of Bonane Mugwarhiriza Antoine, Statistics and Data Science student at Strathmore University.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f7f9fc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #123c69;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            color: #333;
+        }
+
+        .nav-links a:hover {
+            color: #123c69;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 25px 60px;
+            background: linear-gradient(135deg, #eef5ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #123c69;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-weight: normal;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #123c69;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0d2d4f;
+        }
+
+        .btn-secondary {
+            border: 2px solid #123c69;
+            color: #123c69;
+        }
+
+        .btn-secondary:hover {
+            background: #123c69;
+            color: white;
+        }
+
+        /* SECTIONS */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            color: #123c69;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: white;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* SKILLS */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill h3 {
+            color: #123c69;
+            margin-bottom: 8px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: #ffffff;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            color: #123c69;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #123c69;
+            font-weight: bold;
+        }
+
+        /* EDUCATION */
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-left: 5px solid #123c69;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-card h3 {
+            color: #123c69;
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .contact-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #123c69;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Antoine Bonane
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Bonane Mugwarhiriza Antoine</h1>
+
+            <h2>
+                Statistics & Data Science Student
+            </h2>
+
+            <p>
+                I am a Statistics and Data Science student passionate about
+                data analysis, machine learning, statistics and using data
+                to solve real-world problems.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-secondary">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-text">
+
+            <p>
+                I am a Statistics and Data Science student at
+                Strathmore University with an interest in transforming
+                data into meaningful insights.
+            </p>
+
+            <br>
+
+            <p>
+                My interests include data analysis, statistical modelling,
+                machine learning, predictive modelling, data visualization
+                and financial applications of data science.
+            </p>
+
+            <br>
+
+            <p>
+                I am continuously developing my technical and analytical
+                skills through academic projects and practical applications.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Data Analysis & Machine Learning</p>
+            </div>
+
+            <div class="skill">
+                <h3>SQL</h3>
+                <p>Database Management & Analysis</p>
+            </div>
+
+            <div class="skill">
+                <h3>R</h3>
+                <p>Statistical Analysis</p>
+            </div>
+
+            <div class="skill">
+                <h3>Power BI</h3>
+                <p>Data Visualization & Dashboards</p>
+            </div>
+
+            <div class="skill">
+                <h3>Machine Learning</h3>
+                <p>Predictive Modelling</p>
+            </div>
+
+            <div class="skill">
+                <h3>Statistics</h3>
+                <p>Statistical Modelling & Inference</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+
+                <h3>
+                    Food Insecurity Prediction in Africa
+                </h3>
+
+                <p>
+                    A data science project focused on predicting food
+                    insecurity using climate and economic indicators
+                    across selected African countries.
+                </p>
+
+                <p>
+                    <strong>Tools:</strong>
+                    Python, Statistics, Machine Learning
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Heart Disease Prediction
+                </h3>
+
+                <p>
+                    A machine learning project using a neural network
+                    to predict heart disease from patient data.
+                </p>
+
+                <p>
+                    <strong>Tools:</strong>
+                    Python, Neural Networks, Machine Learning
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Fraud Detection
+                </h3>
+
+                <p>
+                    A data science project exploring machine learning
+                    techniques for detecting potentially fraudulent
+                    financial transactions.
+                </p>
+
+                <p>
+                    <strong>Tools:</strong>
+                    Python, Machine Learning, Data Analysis
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>
+                    Digital Market Price
+                </h3>
+
+                <p>
+                    A digital platform concept designed to help customers
+                    find product prices and availability from merchants.
+                </p>
+
+                <p>
+                    <strong>Tools:</strong>
+                    FastAPI, Python, React, MySQL
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="education-card">
+
+            <h3>
+                Strathmore University
+            </h3>
+
+            <p>
+                <strong>BSc Statistics & Data Science</strong>
+            </p>
+
+            <p>
+                Nairobi, Kenya
+            </p>
+
+            <br>
+
+            <p>
+                Focus areas: Statistics, Data Science, Machine Learning,
+                Data Analysis and Predictive Modelling.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <p>
+            I am open to opportunities in data science, analytics,
+            machine learning and related fields.
+        </p>
+
+        <div class="contact-links">
+
+            <!-- Replace the email below with your real email -->
+            <a
+                href="mailto:YOUR_EMAIL@gmail.com"
+                class="btn btn-primary">
+                Email Me
+            </a>
+
+            <!-- Replace YOUR-LINKEDIN with your LinkedIn username -->
+            <a
+                href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+                target="_blank"
+                class="btn btn-secondary">
+                LinkedIn
+            </a>
+
+            <!-- GitHub -->
+            <a
+                href="https://github.com/169463AB"
+                target="_blank"
+                class="btn btn-secondary">
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Bonane Mugwarhiriza Antoine.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
