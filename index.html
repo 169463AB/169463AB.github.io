@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bonane Mugwarhiriza Antoine | Data Science Portfolio</title>
+    <title>Bonane Mugwarhiriza Antoine | Statistics & Data Science</title>
 
     <meta name="description"
           content="Portfolio of Bonane Mugwarhiriza Antoine, Statistics and Data Science student at Strathmore University.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +20,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f6f8fb;
             color: #1f2937;
+            background: #f8fafc;
             line-height: 1.6;
         }
 
@@ -28,13 +29,14 @@
             text-decoration: none;
         }
 
-        /* NAVBAR */
+        /* ================= NAVBAR ================= */
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid #e5e7eb;
             z-index: 1000;
         }
@@ -43,6 +45,7 @@
             max-width: 1150px;
             margin: auto;
             padding: 17px 25px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -50,19 +53,20 @@
 
         .logo {
             font-size: 21px;
-            font-weight: bold;
+            font-weight: 700;
             color: #123c69;
         }
 
         .nav-links {
+            list-style: none;
             display: flex;
             gap: 25px;
-            list-style: none;
         }
 
         .nav-links a {
             color: #374151;
             font-size: 15px;
+            font-weight: 500;
             transition: 0.2s;
         }
 
@@ -70,84 +74,63 @@
             color: #123c69;
         }
 
-
-        /* HERO */
+        /* ================= HERO ================= */
 
         .hero {
             min-height: 100vh;
+            padding: 140px 25px 80px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef5ff 0%,
+                    #ffffff 60%
+                );
+
             display: flex;
             align-items: center;
-            padding: 120px 25px 70px;
-            background:
-                linear-gradient(135deg, #eef5ff 0%, #ffffff 60%);
         }
 
         .hero-container {
-            max-width: 1050px;
+            max-width: 1100px;
             width: 100%;
             margin: auto;
+
             display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 50px;
+            grid-template-columns: 1.5fr 0.7fr;
+            gap: 70px;
             align-items: center;
         }
 
-        .hero-text h1 {
-            font-size: 55px;
-            line-height: 1.1;
+        .hero-small {
             color: #123c69;
-            margin-bottom: 18px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .hero-text h2 {
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.08;
+            color: #123c69;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
             font-size: 25px;
-            font-weight: normal;
+            font-weight: 400;
             color: #4b5563;
             margin-bottom: 20px;
         }
 
-        .hero-text p {
-            font-size: 18px;
-            color: #6b7280;
+        .hero-description {
             max-width: 700px;
+            color: #64748b;
+            font-size: 18px;
             margin-bottom: 30px;
         }
-
-        .hero-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
-        }
-
-        .hero-avatar {
-            width: 150px;
-            height: 150px;
-            margin: auto auto 20px;
-            border-radius: 50%;
-            background: #123c69;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-        }
-
-        .hero-card h3 {
-            color: #123c69;
-            margin-bottom: 8px;
-        }
-
-        .hero-card p {
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-
-        /* BUTTONS */
 
         .buttons {
             display: flex;
@@ -156,11 +139,11 @@
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 22px;
+            padding: 13px 23px;
             border-radius: 7px;
-            font-weight: bold;
-            transition: 0.2s;
+            font-weight: 700;
+            transition: 0.25s;
+            display: inline-block;
         }
 
         .btn-primary {
@@ -169,13 +152,13 @@
         }
 
         .btn-primary:hover {
-            background: #0c2d50;
+            background: #0d2d4e;
+            transform: translateY(-2px);
         }
 
         .btn-outline {
             border: 2px solid #123c69;
             color: #123c69;
-            background: transparent;
         }
 
         .btn-outline:hover {
@@ -183,8 +166,68 @@
             color: white;
         }
 
+        /* HERO CARD */
 
-        /* SECTIONS */
+        .profile-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 35px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 45px rgba(15,23,42,0.08);
+        }
+
+        .avatar {
+            width: 145px;
+            height: 145px;
+
+            margin: 0 auto 22px;
+
+            border-radius: 50%;
+
+            background: #123c69;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        .profile-card h3 {
+            color: #123c69;
+            margin-bottom: 8px;
+            font-size: 21px;
+        }
+
+        .profile-card p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .profile-tags {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: #eef5ff;
+            color: #123c69;
+            padding: 6px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ================= SECTIONS ================= */
 
         section {
             max-width: 1150px;
@@ -194,32 +237,37 @@
 
         .section-title {
             text-align: center;
-            color: #123c69;
             font-size: 34px;
-            margin-bottom: 45px;
+            color: #123c69;
+            margin-bottom: 15px;
         }
 
+        .section-subtitle {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+            color: #64748b;
+        }
 
-        /* ABOUT */
+        /* ================= ABOUT ================= */
 
-        .about-container {
+        .about-box {
             max-width: 850px;
             margin: auto;
             text-align: center;
         }
 
-        .about-container p {
-            color: #5f6772;
+        .about-box p {
+            color: #5f6b7a;
             font-size: 17px;
             margin-bottom: 18px;
         }
 
-
-        /* SKILLS */
+        /* ================= SKILLS ================= */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px;
         }
 
@@ -227,142 +275,184 @@
             background: white;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 25px 18px;
+            padding: 25px 15px;
             text-align: center;
             transition: 0.25s;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+            box-shadow: 0 12px 30px rgba(15,23,42,0.07);
+        }
+
+        .skill-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
         }
 
         .skill-card h3 {
             color: #123c69;
-            margin-bottom: 7px;
+            margin-bottom: 5px;
         }
 
         .skill-card p {
-            font-size: 14px;
-            color: #6b7280;
+            font-size: 13px;
+            color: #64748b;
         }
 
-
-        /* PROJECTS */
+        /* ================= PROJECTS ================= */
 
         #projects {
+            max-width: none;
             background: white;
+        }
+
+        .projects-container {
+            max-width: 1100px;
+            margin: auto;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .project-card {
             background: #f8fafc;
             border: 1px solid #e5e7eb;
-            border-radius: 13px;
-            padding: 28px;
-            position: relative;
+            border-radius: 15px;
+            padding: 30px;
+
+            transition: 0.25s;
         }
 
-        .project-card h3 {
-            color: #123c69;
-            margin-bottom: 10px;
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
         }
 
-        .project-card p {
-            color: #606975;
-            font-size: 15px;
-            margin-bottom: 13px;
-        }
-
-        .status {
+        .project-status {
             display: inline-block;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 5px 9px;
+            padding: 5px 10px;
             border-radius: 20px;
             background: #e8f1ff;
             color: #123c69;
-            margin-bottom: 15px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 14px;
         }
 
-        .status-ongoing {
+        .ongoing {
             background: #fff4d6;
             color: #8a5a00;
         }
 
-        .project-tech {
-            font-size: 13px;
-            font-weight: bold;
+        .project-card h3 {
             color: #123c69;
+            font-size: 21px;
+            margin-bottom: 10px;
         }
 
+        .project-card p {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
 
-        /* EDUCATION */
+        .technologies {
+            color: #123c69 !important;
+            font-size: 13px !important;
+            font-weight: 700;
+        }
+
+        /* ================= EDUCATION ================= */
 
         .education-card {
             max-width: 850px;
             margin: auto;
+
             background: white;
+
             border-left: 5px solid #123c69;
-            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+            padding: 30px;
+
+            box-shadow: 0 10px 30px rgba(15,23,42,0.06);
         }
 
         .education-card h3 {
             color: #123c69;
-            margin-bottom: 8px;
+            margin-bottom: 7px;
         }
 
         .education-card p {
-            color: #606975;
+            color: #64748b;
         }
 
+        .education-card hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 25px 0;
+        }
 
-        /* ACHIEVEMENTS */
+        /* ================= ACHIEVEMENTS ================= */
 
-        .achievements {
-            max-width: 800px;
+        .achievement-grid {
+            max-width: 850px;
             margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
         }
 
         .achievement {
             background: white;
             border: 1px solid #e5e7eb;
-            padding: 18px 22px;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            border-radius: 10px;
+            padding: 22px;
         }
 
+        .achievement h3 {
+            color: #123c69;
+            margin-bottom: 5px;
+        }
 
-        /* CONTACT */
+        .achievement p {
+            color: #64748b;
+            font-size: 14px;
+        }
 
-        .contact {
+        /* ================= CONTACT ================= */
+
+        .contact-section {
             text-align: center;
         }
 
         .contact-description {
             max-width: 650px;
             margin: auto auto 25px;
-            color: #606975;
+            color: #64748b;
         }
 
         .contact-info {
-            margin: 15px 0 25px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            margin: 7px;
         }
 
         .contact-info a {
             color: #123c69;
-            font-weight: bold;
+            font-weight: 700;
         }
 
-
-        /* FOOTER */
+        /* ================= FOOTER ================= */
 
         footer {
             background: #123c69;
@@ -371,28 +461,21 @@
             padding: 25px;
         }
 
+        footer p {
+            font-size: 14px;
+            margin: 3px;
+        }
 
-        /* MOBILE */
+        /* ================= MOBILE ================= */
 
-        @media (max-width: 800px) {
-
-            .nav-container {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .nav-links {
-                gap: 13px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        @media (max-width: 850px) {
 
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .hero-text p {
+            .hero-description {
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -401,19 +484,64 @@
                 justify-content: center;
             }
 
-            .hero-card {
+            .profile-card {
                 max-width: 350px;
                 margin: auto;
             }
 
-            .hero-text h1 {
-                font-size: 40px;
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero-text h2 {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding-top: 160px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero h2 {
                 font-size: 21px;
             }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 70px 20px;
+            }
+
         }
+
     </style>
 </head>
 
@@ -421,7 +549,7 @@
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- ================= NAVIGATION ================= -->
 
 <nav>
 
@@ -433,29 +561,17 @@
 
         <ul class="nav-links">
 
-            <li>
-                <a href="#home">Home</a>
-            </li>
+            <li><a href="#home">Home</a></li>
 
-            <li>
-                <a href="#about">About</a>
-            </li>
+            <li><a href="#about">About</a></li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+            <li><a href="#skills">Skills</a></li>
 
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
+            <li><a href="#projects">Projects</a></li>
 
-            <li>
-                <a href="#education">Education</a>
-            </li>
+            <li><a href="#education">Education</a></li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#contact">Contact</a></li>
 
         </ul>
 
@@ -464,39 +580,50 @@
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
     <div class="hero-container">
 
-        <div class="hero-text">
+        <div>
+
+            <div class="hero-small">
+                Statistics & Data Science
+            </div>
 
             <h1>
                 Bonane Mugwarhiriza Antoine
             </h1>
 
             <h2>
-                Statistics & Data Science Student | Aspiring Data Analyst
+                Statistics & Data Science Student
             </h2>
 
-            <p>
-                I am a Statistics and Data Science student at Strathmore
-                University with an interest in data analysis, programming,
-                statistics and solving real-world problems through data.
+            <p class="hero-description">
+
+                I am a Statistics and Data Science student at
+                Strathmore University interested in data analysis,
+                programming, statistics and using data to solve
+                real-world problems.
+
             </p>
 
             <div class="buttons">
 
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects"
+                   class="btn btn-primary">
+
                     View My Projects
+
                 </a>
 
-                <a
-                    href="CV_Antoine_Bonane_Mugwarhiriza_updated.pdf"
-                    download
-                    class="btn btn-outline">
+                <a href="CV_Antoine_Bonane_Mugwarhiriza_updated.pdf"
+                   download
+                   class="btn btn-outline">
+
                     Download CV
+
                 </a>
 
             </div>
@@ -504,9 +631,11 @@
         </div>
 
 
-        <div class="hero-card">
+        <!-- PROFILE CARD -->
 
-            <div class="hero-avatar">
+        <div class="profile-card">
+
+            <div class="avatar">
                 AB
             </div>
 
@@ -515,8 +644,28 @@
             </h3>
 
             <p>
-                Programming • Analytics • Statistics
+                Learning • Building • Analyzing
             </p>
+
+            <div class="profile-tags">
+
+                <span class="tag">
+                    Python
+                </span>
+
+                <span class="tag">
+                    Statistics
+                </span>
+
+                <span class="tag">
+                    Data Analysis
+                </span>
+
+                <span class="tag">
+                    Programming
+                </span>
+
+            </div>
 
         </div>
 
@@ -525,7 +674,7 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -533,24 +682,27 @@
         About Me
     </h2>
 
-    <div class="about-container">
+    <p class="section-subtitle">
+        A brief introduction about my academic background
+        and interests.
+    </p>
+
+    <div class="about-box">
 
         <p>
-            I am currently pursuing a Bachelor of Science in Statistics
-            and Data Science at Strathmore University.
+            I am currently pursuing a Bachelor of Science in
+            Statistics and Data Science at Strathmore University.
         </p>
 
         <p>
-            I have a strong interest in programming, data analysis,
-            statistics and technology. I enjoy learning how data can
-            be transformed into useful information for real-world
-            decision-making.
+            My interests include statistics, data analysis,
+            programming, machine learning and using data to
+            understand real-world problems.
         </p>
 
         <p>
-            I am continuously developing my technical and analytical
-            skills through academic work, personal projects and
-            practical applications.
+            I am continuously developing my technical skills
+            through coursework, research and personal projects.
         </p>
 
     </div>
@@ -558,7 +710,7 @@
 </section>
 
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
 
@@ -566,51 +718,59 @@
         Skills
     </h2>
 
+    <p class="section-subtitle">
+        Some of the technical and analytical skills I am
+        developing through my studies and projects.
+    </p>
+
     <div class="skills-grid">
 
         <div class="skill-card">
+            <div class="skill-icon">🐍</div>
             <h3>Python</h3>
             <p>Programming & Data Analysis</p>
         </div>
 
         <div class="skill-card">
+            <div class="skill-icon">💻</div>
             <h3>C++</h3>
             <p>Programming</p>
         </div>
 
         <div class="skill-card">
+            <div class="skill-icon">🌐</div>
             <h3>HTML</h3>
             <p>Web Development</p>
         </div>
 
         <div class="skill-card">
-            <h3>Data Cleaning</h3>
-            <p>Preparing & Processing Data</p>
+            <div class="skill-icon">📊</div>
+            <h3>Data Analysis</h3>
+            <p>Cleaning & Visualization</p>
         </div>
 
         <div class="skill-card">
-            <h3>Data Visualization</h3>
-            <p>Communicating Data Insights</p>
+            <div class="skill-icon">📈</div>
+            <h3>Statistics</h3>
+            <p>Statistical Analysis</p>
         </div>
 
         <div class="skill-card">
-            <h3>Microsoft Excel</h3>
+            <div class="skill-icon">📗</div>
+            <h3>Excel</h3>
             <p>Data Analysis</p>
         </div>
 
         <div class="skill-card">
+            <div class="skill-icon">📉</div>
             <h3>Tableau</h3>
             <p>Data Visualization</p>
         </div>
 
         <div class="skill-card">
-            <h3>Statistics</h3>
-            <p>Probability & Statistical Analysis</p>
-        </div>
-
-        <div class="skill-card">
+            <div class="skill-icon">🧮</div>
             <h3>Mathematics</h3>
-            <p>Algebra, Geometry & Trigonometry</p>
+            <p>Mathematical Analysis</p>
         </div>
 
     </div>
@@ -618,156 +778,157 @@
 </section>
 
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-    <h2 class="section-title">
-        Projects
-    </h2>
+    <div class="projects-container">
 
-    <div class="projects-grid">
+        <h2 class="section-title">
+            Projects
+        </h2>
 
-
-        <!-- FOOD INSECURITY -->
-
-        <div class="project-card">
-
-            <span class="status status-ongoing">
-                Ongoing
-            </span>
-
-            <h3>
-                Food Insecurity in East Africa
-            </h3>
-
-            <p>
-                A research and data science project investigating
-                food insecurity in East Africa using climate and
-                economic data.
-            </p>
-
-            <p>
-                The project involves data collection, data preparation,
-                statistical analysis and predictive modelling.
-            </p>
-
-            <p class="project-tech">
-                Statistics • Data Science • Machine Learning
-            </p>
-
-        </div>
+        <p class="section-subtitle">
+            Academic, research and personal projects I have
+            worked on or am currently developing.
+        </p>
 
 
-        <!-- CHALLENGEHUB -->
-
-        <div class="project-card">
-
-            <span class="status">
-                Completed
-            </span>
-
-            <h3>
-                ChallengeHub
-            </h3>
-
-            <p>
-                A web application designed for timed quiz challenges,
-                allowing an organizer to create questions and
-                participants to compete based on speed and accuracy.
-            </p>
-
-            <p>
-                I led the project from concept and design to
-                implementation and testing.
-            </p>
-
-            <p class="project-tech">
-                JavaScript • Web Development
-            </p>
-
-        </div>
+        <div class="projects-grid">
 
 
-        <!-- QMEET -->
+            <!-- FOOD INSECURITY -->
 
-        <div class="project-card">
+            <div class="project-card">
 
-            <span class="status status-ongoing">
-                In Development
-            </span>
+                <span class="project-status ongoing">
+                    Ongoing Research
+                </span>
 
-            <h3>
-                Qmeet
-            </h3>
+                <h3>
+                    Predicting Food Insecurity in East Africa
+                </h3>
 
-            <p>
-                An interest-based networking application designed
-                to help people connect with others who share similar
-                interests.
-            </p>
+                <p>
+                    A research project investigating food insecurity
+                    in East Africa using climate and economic data.
+                </p>
 
-            <p>
-                The project is currently under development with
-                ongoing design and feature development.
-            </p>
+                <p>
+                    The project involves data collection,
+                    preparation, statistical analysis and
+                    predictive modelling.
+                </p>
 
-            <p class="project-tech">
-                Application Development
-            </p>
+                <p class="technologies">
+                    Statistics • Data Science • Machine Learning
+                </p>
 
-        </div>
-
-
-        <!-- PYTHON GAME -->
-
-        <div class="project-card">
-
-            <span class="status">
-                Completed
-            </span>
-
-            <h3>
-                Python Game Development
-            </h3>
-
-            <p>
-                Designed and implemented a Rock-Paper-Scissors game
-                using Python as part of a programming project.
-            </p>
-
-            <p>
-                The project also involved data cleaning,
-                visualization and presenting results.
-            </p>
-
-            <p class="project-tech">
-                Python • Data Analysis
-            </p>
-
-        </div>
+            </div>
 
 
-        <!-- DATA ANALYSIS -->
+            <!-- CHALLENGEHUB -->
 
-        <div class="project-card">
+            <div class="project-card">
 
-            <span class="status">
-                Academic
-            </span>
+                <span class="project-status">
+                    Completed
+                </span>
 
-            <h3>
-                Data Analysis Coursework
-            </h3>
+                <h3>
+                    ChallengeHub
+                </h3>
 
-            <p>
-                Worked on data cleaning, visualization and statistical
-                analysis using real-world datasets.
-            </p>
+                <p>
+                    A web application for organizing timed quiz
+                    challenges where participants compete based
+                    on speed and accuracy.
+                </p>
 
-            <p class="project-tech">
-                Python • Excel • Tableau • Statistics
-            </p>
+                <p>
+                    The application was designed for real-time
+                    participation and ranking.
+                </p>
+
+                <p class="technologies">
+                    Web Development • JavaScript
+                </p>
+
+            </div>
+
+
+            <!-- QMEET -->
+
+            <div class="project-card">
+
+                <span class="project-status ongoing">
+                    In Development
+                </span>
+
+                <h3>
+                    Qmeet
+                </h3>
+
+                <p>
+                    An interest-based networking application
+                    designed to help people connect with others
+                    who share similar interests.
+                </p>
+
+                <p class="technologies">
+                    Application Development
+                </p>
+
+            </div>
+
+
+            <!-- PYTHON -->
+
+            <div class="project-card">
+
+                <span class="project-status">
+                    Completed
+                </span>
+
+                <h3>
+                    Python Game Development
+                </h3>
+
+                <p>
+                    Developed a Rock-Paper-Scissors game using
+                    Python as part of a programming project.
+                </p>
+
+                <p class="technologies">
+                    Python • Programming
+                </p>
+
+            </div>
+
+
+            <!-- DATA ANALYSIS -->
+
+            <div class="project-card">
+
+                <span class="project-status">
+                    Academic
+                </span>
+
+                <h3>
+                    Data Analysis Coursework
+                </h3>
+
+                <p>
+                    Worked with datasets involving data cleaning,
+                    visualization and statistical analysis.
+                </p>
+
+                <p class="technologies">
+                    Python • Excel • Tableau • Statistics
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -776,13 +937,18 @@
 </section>
 
 
-<!-- EDUCATION -->
+<!-- ================= EDUCATION ================= -->
 
 <section id="education">
 
     <h2 class="section-title">
         Education
     </h2>
+
+    <p class="section-subtitle">
+        My academic background.
+    </p>
+
 
     <div class="education-card">
 
@@ -792,19 +958,21 @@
 
         <p>
             <strong>
-                BSc. Statistics and Data Science
+                Bachelor of Science in Statistics and Data Science
             </strong>
         </p>
 
         <p>
-            Nairobi, Kenya | 2023 – Present
+            Nairobi, Kenya • 2023 – Present
         </p>
 
         <p>
             Expected Graduation: 2027
         </p>
 
-        <br>
+
+        <hr>
+
 
         <h3>
             Technical Institute Fundi Maendeleo
@@ -815,7 +983,8 @@
         </p>
 
         <p>
-            Bukavu, DRC | 2016 – 2023
+            Bukavu, Democratic Republic of Congo
+            • 2016 – 2023
         </p>
 
     </div>
@@ -823,7 +992,7 @@
 </section>
 
 
-<!-- ACHIEVEMENTS -->
+<!-- ================= ACHIEVEMENTS ================= -->
 
 <section>
 
@@ -831,89 +1000,121 @@
         Achievements
     </h2>
 
-    <div class="achievements">
-
-        <div class="achievement">
-            🏆 Strathmore University Scholarship — August 2023
-        </div>
-
-        <div class="achievement">
-            🧮 Competed in a Mathematical Competition in Bukavu, DRC
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-    <h2 class="section-title">
-        Contact Me
-    </h2>
-
-    <p class="contact-description">
-        I am interested in opportunities related to data analysis,
-        statistics, programming and data science.
+    <p class="section-subtitle">
+        Some academic achievements.
     </p>
 
-    <div class="contact-info">
 
-        <p>
-            Email:
-            <a href="mailto:antoine.bonane@strathmore.edu">
-                antoine.bonane@strathmore.edu
-            </a>
-        </p>
+    <div class="achievement-grid">
 
-        <p>
-            GitHub:
-            <a
-                href="https://github.com/169463AB"
-                target="_blank">
-                github.com/169463AB
-            </a>
-        </p>
+        <div class="achievement">
 
-        <p>
-            Phone:
-            <a href="tel:+254113193100">
-                +254 113 193 100
-            </a>
-        </p>
+            <h3>
+                Strathmore University Scholarship
+            </h3>
 
-    </div>
+            <p>
+                Awarded in August 2023.
+            </p>
 
-    <div class="buttons" style="justify-content:center;">
+        </div>
 
-        <a
-            href="mailto:antoine.bonane@strathmore.edu"
-            class="btn btn-primary">
-            Email Me
-        </a>
 
-        <a
-            href="https://github.com/169463AB"
-            target="_blank"
-            class="btn btn-outline">
-            GitHub
-        </a>
+        <div class="achievement">
 
-        <a
-            href="CV_Antoine_Bonane_Mugwarhiriza (2).pdf"
-            download
-            class="btn btn-outline">
-            Download CV
-        </a>
+            <h3>
+                Mathematical Competition
+            </h3>
+
+            <p>
+                Participated in a mathematical competition
+                in Bukavu, DRC.
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="contact-section">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p class="contact-description">
+
+            I am interested in opportunities related to
+            data analysis, statistics, programming and
+            data science.
+
+        </p>
+
+
+        <div class="contact-info">
+
+            <p>
+                Email:
+                <a href="mailto:antoine.bonane@strathmore.edu">
+                    antoine.bonane@strathmore.edu
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/169463AB"
+                   target="_blank">
+
+                    github.com/169463AB
+
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="buttons"
+             style="justify-content:center;">
+
+            <a href="mailto:antoine.bonane@strathmore.edu"
+               class="btn btn-primary">
+
+                Email Me
+
+            </a>
+
+
+            <a href="https://github.com/169463AB"
+               target="_blank"
+               class="btn btn-outline">
+
+                GitHub
+
+            </a>
+
+
+            <a href="CV_Antoine_Bonane_Mugwarhiriza_updated.pdf"
+               download
+               class="btn btn-outline">
+
+                Download CV
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
